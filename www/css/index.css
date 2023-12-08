@@ -1,0 +1,47 @@
+:root {
+    --black: black;
+    --primary: rgb(0, 225, 255);
+}
+
+.bg_black {
+    background: var(--black);
+}
+
+.txt-primary {
+    color: var(--primary) !important;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.btn-primary-outline {
+    background: var(--black) !important;
+    border: 1px solid var(--primary);
+    color: var(--primary) !important;
+}
+
+.border-bottom-primary {
+    border-bottom: 1px solid var(--primary);
+}
+
+.input-pesquisa {
+    color: var(--primary);
+    background-color: var(--black) !important;
+}
+
+.input-pesquisa::placeholder {
+    color: var(--primary);
+}
+
+a.txt-primary {
+    color: var(--primary);
+}
+
+.item-list {
+    color: var(--primary);
+}
+
+li {
+    background: var(--black);
+}

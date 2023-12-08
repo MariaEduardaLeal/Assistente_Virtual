@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Betha Assistente</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="css/framework7-bundle.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css"> -->
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- DIV PRINCIPAL -->
+    <div id="app">
+
+        <!-- Onde  vai ficar o conteúdo de todo o projeto-->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="memorias" class="page">
+
+                <!-- Top Navbar -->
+                <div class="navbar border-bottom-primary">
+                    <div class="navbar-bg bg_black"></div>
+                    <div class="navbar-inner">
+
+                        <div class="left padding-left">
+                            <a href='/index/' class="link">
+                                <span class="material-symbols-outlined txt-primary"> arrow_back</span>
+                            </a>
+                        </div>
+                        <div class="title txt-primary">
+                            <span class="material-symbols-outlined">
+                                neurology
+                            </span>Memórias
+                        </div>
+                        <div class="right padding-right txt-primary">
+                            <span class="material-symbols-outlined">
+                                database
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Barra de pesquisa-->
+                <div class="searchbar searchbar-inline">
+                    <div class="searchbar-input-wrap">
+                        <input class="input-pesquisa" type="search" placeholder="Procurar" />
+                        <i class="searchbar-icon"></i>
+                        <span class="input-clear-button"></span>
+                    </div>
+                </div>
+
+                <!-- Corpo do app -->
+                <div class="page-content bg_black txt-primary justify-content-center text-align-center">
+                    <div class="block-title txt-primary">Aprendidas</div>
+
+                    <div class="list media-list list-outline-ios list-strong-ios list-dividers-ios">
+                        <ul>
+                            <li class="item-list">
+                                <a class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">Titulo do modal</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nulla sagittis tellus ut
+                                            turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices
+                                            condimentum sodales sit
+                                            amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum
+                                            ligula nec dapibus feugiat. In
+                                            vel dui laoreet, commodo augue id, pulvinar lacus.</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fab fab-extended fab-center-bottom">
+                    <a class="btn-primary-outline">
+                        <span class="material-symbols-outlined">
+                        </span>
+                        <div class="fab-text">Adicionar</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="js/lib/framework7-bundle.js"></script>
+    <!--Typed JS - efeito de digitação -->
+    <script src="js/lib/typed.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/router.js"></script>
+
+    <script>
+        var typed = new Typed('#resposta', {
+            strings: ['Isso é um teste de texto', ''],
+            typeSpeed: 40,
+            showCursor: false,
+            onComplete: function (self) {
+                toastBotton = app.toast.create({
+                    text: 'Fala concluída com sucesso',
+                    closeTimeout: 2000,
+                });
+                toastBotton.open();
+            }
+        });
+    </script>
+</body>
+
+</html>
