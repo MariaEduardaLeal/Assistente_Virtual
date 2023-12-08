@@ -28,15 +28,6 @@
     border-bottom: 1px solid var(--primary);
 }
 
-.input-pesquisa {
-    color: var(--primary);
-    background-color: var(--black) !important;
-}
-
-.input-pesquisa::placeholder {
-    color: var(--primary);
-}
-
 a.txt-primary {
     color: var(--primary);
 }
@@ -47,4 +38,8 @@ a.txt-primary {
 
 li {
     background: var(--black);
+}
+
+.font-bold{
+    font-weight: bold !important;
 }

@@ -55,53 +55,69 @@
                 </div>
 
                 <!--Barra de pesquisa-->
-                <div class="searchbar searchbar-inline">
-                    <div class="searchbar-input-wrap">
-                        <input class="input-pesquisa" type="search" placeholder="Procurar" />
-                        <i class="searchbar-icon"></i>
-                        <span class="input-clear-button"></span>
-                    </div>
+                <div class="subnavbar bg_black">
+                    <form data-search-container=".search-list" data-search-in=".item-title"
+                        class="searchbar searchbar-init">
+                        <div class="searchbar-inner">
+                            <div class="searchbar-input-wrap">
+                                <input type="search" placeholder="Search" />
+                                <i class="searchbar-icon"></i>
+                                <span class="input-clear-button"></span>
+                            </div>
+                            <span class="searchbar-disable-button">Cancel</span>
+                        </div>
+                    </form>
                 </div>
 
                 <!-- Corpo do app -->
                 <div class="page-content bg_black txt-primary justify-content-center text-align-center">
                     <div class="block-title txt-primary">Aprendidas</div>
 
-                    <div style="color: aqua;" class="list list-outline-ios list-strong-ios list-dividers-ios media-list">
+
+                    <div class="txt-primary list media-list list-outline-ios list-strong-ios list-dividers-ios">
                         <ul>
-                          <li>
-                            <a class="item-link item-content">
-                              <div class="item-inner">
-                                <div class="item-title-row">
-                                  <div class="item-title">Facebook</div>
-                                  <div class="item-after">17:14</div>
-                                </div>
-                                <div class="item-subtitle">New messages from John Doe</div>
-                                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut
-                                  turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit
-                                  amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In
-                                  vel dui laoreet, commodo augue id, pulvinar lacus.</div>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="item-link item-content">
-                              <div class="item-inner">
-                                <div class="item-title-row">
-                                  <div class="item-title">John Doe (via Twitter)</div>
-                                  <div class="item-after">17:11</div>
-                                </div>
-                                <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
-                                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut
-                                  turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit
-                                  amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In
-                                  vel dui laoreet, commodo augue id, pulvinar lacus.</div>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    
+                            <li>
+                                <a class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title .font-bold"><span class="material-symbols-outlined">
+                                                    edit
+                                                </span>Texto escrito de título</div>
+                                            <div class="item-after">
+                                                <span class="badge color-blue padding-left padding-right">ID: 1</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-subtitle">
+                                            <span class="material-symbols-outlined">
+                                                mic
+                                            </span>
+                                            O que falamos para a Assistente
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title .font-bold"><span class="material-symbols-outlined">
+                                                    edit
+                                                </span>Texto escrito de título</div>
+                                            <div class="item-after">
+                                                <span class="badge color-blue padding-left padding-right">ID: 2</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-subtitle">
+                                            <span class="material-symbols-outlined">
+                                                mic
+                                            </span>
+                                            O que falamos para a Assistente
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                    </div>
+
                 </div>
 
                 <div class="fab fab-extended fab-center-bottom">

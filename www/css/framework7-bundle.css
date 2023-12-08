@@ -3600,6 +3600,7 @@ html.device-full-viewport body {
   margin: 0;
   padding: 0;
   position: relative;
+  /* color: blue; */
 }
 .list ul ul {
   padding-left: calc(var(--f7-list-item-padding-horizontal) + var(--f7-list-in-list-padding-left));
@@ -3656,7 +3657,7 @@ html.device-full-viewport body {
   max-width: 100%;
   font-size: var(--f7-list-item-title-font-size);
   font-weight: var(--f7-list-item-title-font-weight);
-  color: var(--f7-list-item-title-text-color);
+  /* color: var(--f7-list-item-title-text-color); */
   line-height: var(--f7-list-item-title-line-height);
 }
 .list .item-after {
@@ -3665,7 +3666,7 @@ html.device-full-viewport body {
   display: flex;
   font-size: var(--f7-list-item-after-font-size);
   font-weight: var(--f7-list-item-after-font-weight);
-  color: var(--f7-list-item-after-text-color);
+  /* color: var(--f7-list-item-after-text-color); */
   line-height: var(--f7-list-item-after-line-height);
   margin-left: auto;
 }
@@ -3674,13 +3675,13 @@ html.device-full-viewport body {
   white-space: normal;
 }
 .list .item-header {
-  color: var(--f7-list-item-header-text-color);
+  /* color: var(--f7-list-item-header-text-color); */
   font-size: var(--f7-list-item-header-font-size);
   font-weight: var(--f7-list-item-header-font-weight);
   line-height: var(--f7-list-item-header-line-height);
 }
 .list .item-footer {
-  color: var(--f7-list-item-footer-text-color);
+  /* color: var(--f7-list-item-footer-text-color); */
   font-size: var(--f7-list-item-footer-font-size);
   font-weight: var(--f7-list-item-footer-font-weight);
   line-height: var(--f7-list-item-footer-line-height);
@@ -3726,7 +3727,7 @@ html.device-full-viewport body {
   text-overflow: ellipsis;
   font-size: var(--f7-list-item-subtitle-font-size);
   font-weight: var(--f7-list-item-subtitle-font-weight);
-  color: var(--f7-list-item-subtitle-text-color);
+  /* color: var(--f7-list-item-subtitle-text-color); */
   line-height: var(--f7-list-item-subtitle-line-height);
 }
 .list .item-text {
@@ -3740,7 +3741,7 @@ html.device-full-viewport body {
   display: -webkit-box;
   font-size: var(--f7-list-item-text-font-size);
   font-weight: var(--f7-list-item-text-font-weight);
-  color: var(--f7-list-item-text-text-color);
+  /* color: var(--f7-list-item-text-text-color); */
   line-height: var(--f7-list-item-text-line-height);
   max-height: calc(var(--f7-list-item-text-line-height) * var(--f7-list-item-text-max-lines));
 }
