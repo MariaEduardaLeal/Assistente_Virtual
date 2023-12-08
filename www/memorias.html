@@ -104,7 +104,7 @@
 
                                 <!-- FAB BUTTONS AQUI -->
 
-                                <div class="fab fab-extended fab-left-bottom">
+                                <div style="width: 120px;" class="fab fab-extended fab-left-bottom">
                                     <a href="#" class="btn-success-outline">
                                         <span class="material-symbols-outlined">
                                             save
@@ -113,14 +113,91 @@
                                     </a>
                                 </div>
 
-                                <div class="fab fab-extended fab-right-bottom">
-                                    <a href="#" class="btn-danger-outline popup-close">
+                                <div class="fab fab-extended fab-center-bottom">
+                                    <a class="btn-primary-outline">
                                         <span class="material-symbols-outlined">
-                                            delete_forever
+                                            mic
                                         </span>
-                                        <div class="fab-text"> Cancelar</div>
                                     </a>
                                 </div>
+
+                                <div style="width: 120px;" class="fab fab-extended fab-right-bottom">
+                                    <a href="#" class="btn-danger-outline popup-close">
+                                        <span style="margin-left: 18px;" class="material-symbols-outlined">
+                                            delete_forever
+                                        </span>
+                                        <div style="margin-right: 3px;" class="fab-text"> Cancelar</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POPUP RESPOSTAS-->
+                <div class="popup popup-resposta bg_black">
+                    <div class="view">
+                        <div class="page">
+                            <div class="navbar bg-black">
+                                <!-- Remova a linha <div class="navbar-bg bg-black"></div> -->
+                                <div class="navbar-inner bg_black">
+                                    <div class="title bg-black txt-primary">Resposta da Assistente</div>
+                                </div>
+                            </div>
+                            <div class="page-content bg_black">
+                                <div class="list no-hairlines-md">
+                                    <ul>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">Resposta Escrita
+                                                </div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">Resposta Falada
+                                                </div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- FAB BUTTONS AQUI -->
+
+                                <div style="width: 120px;" class="fab fab-extended fab-left-bottom">
+                                    <a href="#" class="btn-warning-outline">
+                                        <span class="material-symbols-outlined">
+                                            save
+                                        </span>
+                                        <div class="fab-text"> Salvar</div>
+                                    </a>
+                                </div>
+
+                                <div class="fab fab-extended fab-center-bottom">
+                                    <a class="btn-primary-outline">
+                                        <span class="material-symbols-outlined">
+                                            campaign
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <div style="width: 120px;" class="fab fab-extended fab-right-bottom">
+                                    <a href="#" class="btn-danger-outline popup-close">
+                                        <span style="margin-left: 18px;" class="material-symbols-outlined">
+                                            delete_forever
+                                        </span>
+                                        <div style="margin-right: 3px;" class="fab-text"> Cancelar</div>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -147,7 +224,7 @@
                     <div class="txt-primary list media-list list-outline-ios list-strong-ios list-dividers-ios">
                         <ul>
                             <li>
-                                <a class="item-link item-content">
+                                <a data-popup=".popup-resposta" class="item-link item-content popup-open">
                                     <div class="item-inner">
                                         <div class="item-title-row">
                                             <div class="item-title .font-bold"><span class="material-symbols-outlined">
