@@ -31,7 +31,7 @@
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="memorias" class="page">
 
-                <!-- Top Navbar -->
+                <!--Navbar barra em cima-->
                 <div class="navbar border-bottom-primary">
                     <div class="navbar-bg bg_black"></div>
                     <div class="navbar-inner">
@@ -54,20 +54,90 @@
                     </div>
                 </div>
 
-                <!--Barra de pesquisa-->
-                <div class="subnavbar bg_black">
-                    <form data-search-container=".search-list" data-search-in=".item-title"
-                        class="searchbar searchbar-init">
-                        <div class="searchbar-inner">
-                            <div class="searchbar-input-wrap">
-                                <input type="search" placeholder="Search" />
-                                <i class="searchbar-icon"></i>
-                                <span class="input-clear-button"></span>
-                            </div>
-                            <span class="searchbar-disable-button">Cancel</span>
-                        </div>
-                    </form>
+                <!--Botão Adicionar-->
+                <div class="fab fab-extended fab-center-bottom">
+                    <a data-popup=".popup-pergunta" class="btn-primary-outline popup-open">
+                        <span class="material-symbols-outlined">
+                        </span>
+                        <div class="fab-text">Adicionar</div>
+                    </a>
                 </div>
+
+                <!-- POPUP PERGUNTAS-->
+                <div class="popup popup-pergunta bg_black">
+                    <div class="view">
+                        <div class="page">
+                            <div class="navbar bg-black">
+                                <div class="navbar-inner bg_black">
+                                    <div class="title txt-primary">Nova Pergunta</div>
+                                    <div class="right">
+                                        <!-- Link to close popup -->
+                                        <a class="link popup-close"><i class="mdi mdi-close-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-content bg_black">
+                                <div class="list no-hairlines-md bg_black">
+                                    <ul>
+                                        <li class="bg_black item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">Titulo da
+                                                    pergunta</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">O que a
+                                                    assistente entendeu</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- FAB BUTTONS AQUI -->
+
+                                <div class="fab fab-extended fab-left-bottom">
+                                    <a href="#" class="btn-success-outline">
+                                        <span class="material-symbols-outlined">
+                                            save
+                                        </span>
+                                        <div class="fab-text"> Salvar</div>
+                                    </a>
+                                </div>
+
+                                <div class="fab fab-extended fab-right-bottom">
+                                    <a href="#" class="btn-danger-outline popup-close">
+                                        <span class="material-symbols-outlined">
+                                            delete_forever
+                                        </span>
+                                        <div class="fab-text"> Cancelar</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Barra de pesquisa-->
+                <div class="searchbar-backdrop"></div>
+                <form class="searchbar">
+                    <div class="searchbar-inner">
+                        <div class="searchbar-input-wrap">
+                            <input class="input-custom" type="search" placeholder="Procurar" />
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                        </div>
+                        <span class="searchbar-disable-button">Cancel</span>
+                    </div>
+                </form>
 
                 <!-- Corpo do app -->
                 <div class="page-content bg_black txt-primary justify-content-center text-align-center">
@@ -100,9 +170,9 @@
                                 <a class="item-link item-content">
                                     <div class="item-inner">
                                         <div class="item-title-row">
-                                            <div class="item-title .font-bold"><span class="material-symbols-outlined">
+                                            <div class="item-title font-bold"><span class="material-symbols-outlined">
                                                     edit
-                                                </span>Texto escrito de título</div>
+                                                </span>Outro texto escrito de título 2</div>
                                             <div class="item-after">
                                                 <span class="badge color-blue padding-left padding-right">ID: 2</span>
                                             </div>
@@ -120,13 +190,6 @@
 
                 </div>
 
-                <div class="fab fab-extended fab-center-bottom">
-                    <a class="btn-primary-outline">
-                        <span class="material-symbols-outlined">
-                        </span>
-                        <div class="fab-text">Adicionar</div>
-                    </a>
-                </div>
             </div>
         </div>
     </div>

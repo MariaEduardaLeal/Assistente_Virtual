@@ -1,6 +1,10 @@
 :root {
     --black: black;
-    --primary: rgb(0, 225, 255);
+    --primary: #00b7ff;
+    --secondary: deeppink;
+    --success: green;
+    --warning: gold;
+    --danger: red;
 }
 
 .bg_black {
@@ -18,28 +22,57 @@
     justify-content: center;
 }
 
-.btn-primary-outline {
+.btn-primary-outline{
     background: var(--black) !important;
-    border: 1px solid var(--primary);
+    color: var(--primary) !important;
+    border: 1px solid var(--primary);   
+}
+
+.btn-secondary-outline{
+    background: var(--black) !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary);   
+}
+
+.btn-success-outline{
+    background: var(--black) !important;
+    color: var(--success) !important;
+    border: 1px solid var(--success);   
+}
+
+.btn-warning-outline{
+    background: var(--black) !important;
+    color: var(--warning) !important;
+    border: 1px solid var(--warning);   
+}
+
+.btn-danger-outline{
+    background: var(--black) !important;
+    color: var(--danger) !important;
+    border: 1px solid var(--danger);   
+}
+
+.border-bottom-primary{
+    border-bottom: 1px solid var(--primary) !important;
+}
+
+.input-custom{
+    background: var(--black)!important;
     color: var(--primary) !important;
 }
 
-.border-bottom-primary {
-    border-bottom: 1px solid var(--primary);
+.input-custom::placeholder{   
+    color: var(--primary) !important;
 }
 
-a.txt-primary {
-    color: var(--primary);
+a.txt-primary{
+    color: var(--primary) !important;
 }
 
-.item-list {
-    color: var(--primary);
-}
-
-li {
+li{
     background: var(--black);
 }
 
-.font-bold{
+.fw-bold{
     font-weight: bold !important;
 }
