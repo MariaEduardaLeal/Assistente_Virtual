@@ -7,7 +7,10 @@
     background: var(--black);
 }
 
-.txt-primary {
+.txt-primary{
+    color: var(--primary) !important;
+}
+.item-link{
     color: var(--primary) !important;
 }
 
