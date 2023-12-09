@@ -43,12 +43,15 @@
                         <img style="max-width: 350px;" src="img/betha.gif">
                     </a>
                     <div class="block txt-primary">
-                        <p id="resposta"></p>
+                        <p id="pergunta"></p>
+                    </div>
+                    <div class="block txt-primary">
+                        <p id="Resposta"></p>
                     </div>
                 </div>
 
                 <div class="fab fab-extended fab-center-bottom">
-                    <a class="btn-primary-outline">
+                    <a id="btn_falar" class="btn-primary-outline">
                         <span class="material-symbols-outlined">
                             mic
                         </span>
@@ -63,6 +66,10 @@
     <script src="js/lib/typed.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/router.js"></script>
+    <!--Jquery-->
+    <script type="text/javascript" src="js/lib/jquery-3.7.1.min.js"></script>
+    <!--CORDOVA-->
+    <script type="text/javascript" src="cordova.js"></script>
 
     <script>
         var typed = new Typed('#resposta', {

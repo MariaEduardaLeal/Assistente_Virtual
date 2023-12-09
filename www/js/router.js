@@ -1,4 +1,4 @@
-
+document.addEventListener('deviceready', onDeviceReady, false);
 var app = new Framework7({
   // App root element
   el: '#app',
@@ -15,7 +15,7 @@ var app = new Framework7({
       url: 'index.html',
       on: {
         pageInit: function (e, page) {
-
+          $.getScript('js/index.js');
         }
       }
 
@@ -25,20 +25,13 @@ var app = new Framework7({
       url: 'memorias.html',
       on: {
         pageInit: function (e, page) {
-          var searchbar = app.searchbar.create({
-            el: '.searchbar',
-            searchContainer: '.list',
-            searchIn: '.item-title',
-            on: {
-              search(sb, query, previousQuery) {
-                console.log(query, previousQuery);
-              }
-            }
-          });
+          $.getScript('js/index.js');
         }
       }
     },
   ],
 });
-
-var mainView = app.views.create('.view-main');
+//Quando o dispositivo estiver pronto ele irá chamar o framework7, é necessário que o cordova inicialize antes do framework por causa dos plugins de voz
+function onDeviceReady() {
+  let mainView = app.views.create('.view-main', {url: '/index/'});
+}

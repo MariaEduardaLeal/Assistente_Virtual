@@ -1,29 +1,55 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+//Assim que a rota index começar
+//Verificar se tem permissão de usar speechrecognition
+window.plugins.speechRecognition.hasPermission(
+    //Se sucesso 
+    function (permissao) {
+        //Se não tiver permissão
+        if (!permissao) {
+            //Solicitar a permissão
+            window.plugins.speechRecognition.requestPermission(
+                //Se sucessp
+                function (temPermissao) {
+                   app.dialog.alert('Permissão concedida: ' + temPermissao)
+                }, 
+                //Se erro
+                function (erro) {
+                    app.dialog.alert('Não é possível ultilizar a assistente sem a permissão do microfone')
+                })
+        }
+     }, 
+     //Se der error
+     function (error) {
+        app.dialog.alert('HasPermission error:' + error)
+     })
 
-// Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
-document.addEventListener('deviceready', onDeviceReady, false);
+    
+//Clique do botão falar
+$('#btn_falar').on('click', function() {
+    let options = {
+        language: 'pt-BR',
+        showPopup: false,  // Pop-up do google para reconhecer a fala
+        showPartial: true 
+      }
+       
+      //Começou a escutar
+      window.plugins.speechRecognition.startListening(
+        //Se sucesso
+        function (dados) {
+            $.each(dados, function (index, texto) {
+                //Colocar o que ela entende no paragrafo chamado pergunta
+                $('#pergunta').html("").append(texto);
+                //Pega o valor do que ela entendeu
+                let pergunta = $('#pergunta').html().toLowerCase();
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
-
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
-}
+                //Verificar se o comando é esse
+                if (pergunta == "acessar memórias" || pergunta == "acessar memória") {
+                    app.views.main.router.navigate('/memorias/');
+                }
+            })
+        }
+        //Se der erro
+        ,function (error) {
+            app.dialog.alert('Houve um erro:'+error)
+        }
+        , options)
+})
